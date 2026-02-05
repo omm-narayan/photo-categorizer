@@ -9,7 +9,7 @@ import tempfile
 
 st.set_page_config(page_title="Photo Categorizer", layout="wide")
 
-st.title("📸 AI Photo Categorizer")
+st.title("AI Photo Categorizer")
 st.markdown("Organize photos using face detection")
 
 class SimpleFaceCategorizer:
@@ -116,9 +116,9 @@ with st.sidebar:
                 sample_paths.append(tmp_path)
             
             if categorizer.register_person(person_name, sample_paths):
-                st.success(f"✅ {person_name} registered!")
+                st.success(f"{person_name} registered!")
     
-    st.header("📂 Registered Persons")
+    st.header("Registered Persons")
     registered_dir = Path("data/registered")
     if registered_dir.exists():
         for person in sorted(registered_dir.iterdir()):
@@ -126,7 +126,7 @@ with st.sidebar:
                 st.write(f"• {person.name}")
 
 # Main area
-st.header("📷 Upload Photos to Categorize")
+st.header("Upload Photos to Categorize")
 
 uploaded_files = st.file_uploader(
     "Choose photos to organize",
@@ -147,7 +147,7 @@ if uploaded_files:
             persons + ["Unknown"]
         )
         
-        if st.button("🚀 Categorize Photos"):
+        if st.button("Categorize Photos"):
             with st.spinner("Processing..."):
                 results = []
                 
@@ -165,7 +165,7 @@ if uploaded_files:
                     os.unlink(tmp_path)
                 
                 # Show results
-                st.success(f"✅ Processed {len(results)} photos!")
+                st.success(f"Processed {len(results)} photos!")
                 
                 # Display summary
                 categorized = sum(1 for r in results if r['status'] == 'success')
@@ -191,7 +191,7 @@ if uploaded_files:
         st.warning("Please register at least one person first!")
 
 # View categorized photos
-st.header("📊 View Organized Photos")
+st.header("View Organized Photos")
 
 categorized_dir = Path("data/categorized")
 if categorized_dir.exists() and any(categorized_dir.iterdir()):
