@@ -1,16 +1,16 @@
-# 📸 AI Photo Categorizer
+# AI Photo Categorizer
 
 An intelligent photo organizer that uses face detection to automatically categorize photos by person.
 
-## ✨ Features
-- 👤 Register persons with sample photos
-- 🔍 Face detection using OpenCV
-- 📂 Automatic photo categorization
-- 🎯 Simple and intuitive web interface
-- 📊 View categorized results
-- 🚀 Fast processing with Python 3.11
+## Features
+- Register persons with sample photos
+- Face detection using OpenCV
+- Automatic photo categorization
+- Simple and intuitive web interface
+- View categorized results
+- Fast processing with Python 3.11
 
-## 🚀 Quick Start
+## Quick Start
 
 ### Prerequisites
 - macOS (or Linux/Windows with adjustments)
